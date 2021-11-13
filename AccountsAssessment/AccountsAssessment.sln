@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounts.API", "Accounts.API\Accounts.API.csproj", "{F3E5D729-B640-44E8-9E13-DF915E7666B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Accounts.API", "Accounts.API\Accounts.API.csproj", "{F3E5D729-B640-44E8-9E13-DF915E7666B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounts.Domain", "Accounts.Domain\Accounts.Domain.csproj", "{5FDC2E94-C48E-4A20-82B1-25C99E2A3D34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F3E5D729-B640-44E8-9E13-DF915E7666B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3E5D729-B640-44E8-9E13-DF915E7666B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3E5D729-B640-44E8-9E13-DF915E7666B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FDC2E94-C48E-4A20-82B1-25C99E2A3D34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FDC2E94-C48E-4A20-82B1-25C99E2A3D34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FDC2E94-C48E-4A20-82B1-25C99E2A3D34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FDC2E94-C48E-4A20-82B1-25C99E2A3D34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

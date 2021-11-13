@@ -6,7 +6,6 @@ C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.A
 C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.API\bin\Debug\netcoreapp3.1\Accounts.API.runtimeconfig.dev.json
 C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.API\bin\Debug\netcoreapp3.1\Accounts.API.dll
 C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.API\bin\Debug\netcoreapp3.1\Accounts.API.pdb
-C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.API\obj\Debug\netcoreapp3.1\Accounts.API.csprojAssemblyReference.cache
 C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.API\obj\Debug\netcoreapp3.1\Accounts.API.AssemblyInfoInputs.cache
 C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.API\obj\Debug\netcoreapp3.1\Accounts.API.AssemblyInfo.cs
 C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.API\obj\Debug\netcoreapp3.1\Accounts.API.csproj.CoreCompileInputs.cache
