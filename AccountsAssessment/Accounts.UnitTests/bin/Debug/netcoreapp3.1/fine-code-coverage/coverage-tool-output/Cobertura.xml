@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.7150943396226415" branch-rate="0.3333333333333333" lines-covered="379" lines-valid="530" branches-covered="2" branches-valid="6" complexity="94" version="0" timestamp="1636906131">
+<coverage line-rate="0.6363636363636364" branch-rate="0.2857142857142857" lines-covered="406" lines-valid="638" branches-covered="4" branches-valid="14" complexity="107" version="0" timestamp="1636917093">
   <sources>
     <source>C:\</source>
   </sources>
   <packages>
-    <package name="Accounts.API" line-rate="0.21052631578947367" branch-rate="0.5" complexity="32">
+    <package name="Accounts.API" line-rate="0.17142857142857143" branch-rate="0.3333333333333333" complexity="35">
       <classes>
         <class name="Accounts.API.Controllers.CustomerController" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.API\Controllers\CustomerController.cs" line-rate="0" branch-rate="1" complexity="4">
           <methods>
@@ -31,10 +31,10 @@
             <method name="CreateAccount" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="55" hits="0" branch="false" />
-                <line number="58" hits="0" branch="false" />
-                <line number="61" hits="0" branch="false" />
+                <line number="57" hits="0" branch="false" />
+                <line number="60" hits="0" branch="false" />
+                <line number="62" hits="0" branch="false" />
                 <line number="63" hits="0" branch="false" />
-                <line number="64" hits="0" branch="false" />
               </lines>
             </method>
             <method name=".ctor" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
@@ -79,25 +79,25 @@
             <line number="49" hits="0" branch="false" />
             <line number="50" hits="0" branch="false" />
             <line number="55" hits="0" branch="false" />
-            <line number="58" hits="0" branch="false" />
-            <line number="61" hits="0" branch="false" />
+            <line number="57" hits="0" branch="false" />
+            <line number="60" hits="0" branch="false" />
+            <line number="62" hits="0" branch="false" />
             <line number="63" hits="0" branch="false" />
-            <line number="64" hits="0" branch="false" />
           </lines>
         </class>
         <class name="Accounts.API.Dto.Account.AccountCreationResponse" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.API\Dto\Account\AccountCreationResponse.cs" line-rate="0" branch-rate="1" complexity="3">
           <methods>
-            <method name="get_CustomerName" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_AccountNumber" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="5" hits="0" branch="false" />
               </lines>
             </method>
-            <method name="get_AccountNumber" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Balance" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="6" hits="0" branch="false" />
               </lines>
             </method>
-            <method name="get_Balance" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Message" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
                 <line number="7" hits="0" branch="false" />
               </lines>
@@ -205,7 +205,37 @@
             <line number="10" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Accounts.API.Mappers.CustomerMapper" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.API\Mappers\CustomerMapper.cs" line-rate="0.7575757575757576" branch-rate="1" complexity="4">
+        <class name="Accounts.API.Mappers.AccountApplicationServiceMapper" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.API\Mappers\AccountApplicationServiceMapper.cs" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="MapToAccountCreationResponse" signature="(...)" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="10" hits="0" branch="false" />
+                <line number="11" hits="0" branch="false" />
+                <line number="13" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="14" hits="0" branch="false" />
+                <line number="15" hits="0" branch="false" />
+                <line number="16" hits="0" branch="false" />
+                <line number="17" hits="0" branch="false" />
+                <line number="18" hits="0" branch="false" />
+                <line number="20" hits="0" branch="false" />
+                <line number="21" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="10" hits="0" branch="false" />
+            <line number="11" hits="0" branch="false" />
+            <line number="13" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="14" hits="0" branch="false" />
+            <line number="15" hits="0" branch="false" />
+            <line number="16" hits="0" branch="false" />
+            <line number="17" hits="0" branch="false" />
+            <line number="18" hits="0" branch="false" />
+            <line number="20" hits="0" branch="false" />
+            <line number="21" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="Accounts.API.Mappers.CustomerApplicationServiceMapper" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.API\Mappers\CustomerApplicationServiceMapper.cs" line-rate="0.7575757575757576" branch-rate="1" complexity="4">
           <methods>
             <method name="GetCustomerResponse" signature="(...)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
@@ -319,64 +349,59 @@
             <line number="24" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Accounts.API.Startup" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.API\Startup.cs" line-rate="0" branch-rate="0" complexity="6">
+        <class name="Accounts.API.Startup" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.API\Startup.cs" line-rate="0" branch-rate="0" complexity="7">
           <methods>
             <method name="get_Configuration" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="29" hits="0" branch="false" />
+                <line number="30" hits="0" branch="false" />
               </lines>
             </method>
             <method name="ConfigureServices" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="33" hits="0" branch="false" />
                 <line number="34" hits="0" branch="false" />
-                <line number="37" hits="0" branch="false" />
-                <line number="40" hits="0" branch="false" />
-                <line number="41" hits="0" branch="false" />
+                <line number="35" hits="0" branch="false" />
+                <line number="36" hits="0" branch="false" />
+                <line number="39" hits="0" branch="false" />
                 <line number="42" hits="0" branch="false" />
-                <line number="43" hits="0" branch="false" />
+                <line number="44" hits="0" branch="false" />
                 <line number="45" hits="0" branch="false" />
+                <line number="46" hits="0" branch="false" />
+                <line number="48" hits="0" branch="false" />
+                <line number="49" hits="0" branch="false" />
+                <line number="51" hits="0" branch="false" />
+                <line number="52" hits="0" branch="false" />
+                <line number="53" hits="0" branch="false" />
               </lines>
             </method>
             <method name="Configure" signature="(...)" line-rate="0" branch-rate="0" complexity="2">
               <lines>
-                <line number="49" hits="0" branch="false" />
-                <line number="50" hits="0" branch="true" condition-coverage="0% (0/2)" />
-                <line number="51" hits="0" branch="false" />
-                <line number="52" hits="0" branch="false" />
-                <line number="53" hits="0" branch="false" />
-                <line number="55" hits="0" branch="false" />
                 <line number="57" hits="0" branch="false" />
+                <line number="58" hits="0" branch="true" condition-coverage="0% (0/2)" />
                 <line number="59" hits="0" branch="false" />
+                <line number="60" hits="0" branch="false" />
                 <line number="61" hits="0" branch="false" />
-                <line number="62" hits="0" branch="false" />
                 <line number="63" hits="0" branch="false" />
-                <line number="64" hits="0" branch="false" />
+                <line number="65" hits="0" branch="false" />
                 <line number="67" hits="0" branch="false" />
-                <line number="68" hits="0" branch="false" />
                 <line number="69" hits="0" branch="false" />
+                <line number="70" hits="0" branch="false" />
                 <line number="71" hits="0" branch="false" />
                 <line number="72" hits="0" branch="false" />
-                <line number="73" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="DataInitialize" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
+                <line number="75" hits="0" branch="false" />
                 <line number="76" hits="0" branch="false" />
                 <line number="77" hits="0" branch="false" />
-                <line number="78" hits="0" branch="false" />
                 <line number="79" hits="0" branch="false" />
                 <line number="80" hits="0" branch="false" />
-                <line number="81" hits="0" branch="false" />
-                <line number="82" hits="0" branch="false" />
                 <line number="83" hits="0" branch="false" />
                 <line number="84" hits="0" branch="false" />
                 <line number="85" hits="0" branch="false" />
                 <line number="86" hits="0" branch="false" />
                 <line number="87" hits="0" branch="false" />
                 <line number="88" hits="0" branch="false" />
-                <line number="89" hits="0" branch="false" />
-                <line number="90" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="DataInitialize" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
                 <line number="91" hits="0" branch="false" />
                 <line number="92" hits="0" branch="false" />
                 <line number="93" hits="0" branch="false" />
@@ -411,70 +436,103 @@
                 <line number="122" hits="0" branch="false" />
                 <line number="123" hits="0" branch="false" />
                 <line number="124" hits="0" branch="false" />
+                <line number="125" hits="0" branch="false" />
                 <line number="126" hits="0" branch="false" />
                 <line number="127" hits="0" branch="false" />
                 <line number="128" hits="0" branch="false" />
                 <line number="129" hits="0" branch="false" />
+                <line number="130" hits="0" branch="false" />
                 <line number="131" hits="0" branch="false" />
                 <line number="132" hits="0" branch="false" />
+                <line number="133" hits="0" branch="false" />
+                <line number="134" hits="0" branch="false" />
+                <line number="135" hits="0" branch="false" />
+                <line number="136" hits="0" branch="false" />
+                <line number="137" hits="0" branch="false" />
+                <line number="138" hits="0" branch="false" />
+                <line number="139" hits="0" branch="false" />
+                <line number="141" hits="0" branch="false" />
+                <line number="142" hits="0" branch="false" />
+                <line number="143" hits="0" branch="false" />
+                <line number="144" hits="0" branch="false" />
+                <line number="146" hits="0" branch="false" />
+                <line number="147" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="AddSwagger" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="150" hits="0" branch="false" />
+                <line number="151" hits="0" branch="false" />
+                <line number="152" hits="0" branch="false" />
+                <line number="153" hits="0" branch="false" />
+                <line number="154" hits="0" branch="false" />
+                <line number="155" hits="0" branch="false" />
+                <line number="156" hits="0" branch="false" />
+                <line number="157" hits="0" branch="false" />
+                <line number="158" hits="0" branch="false" />
+                <line number="159" hits="0" branch="false" />
+                <line number="160" hits="0" branch="false" />
+                <line number="161" hits="0" branch="false" />
+                <line number="162" hits="0" branch="false" />
+                <line number="163" hits="0" branch="false" />
+                <line number="164" hits="0" branch="false" />
+                <line number="165" hits="0" branch="false" />
+                <line number="166" hits="0" branch="false" />
+                <line number="167" hits="0" branch="false" />
+                <line number="168" hits="0" branch="false" />
               </lines>
             </method>
             <method name=".ctor" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="24" hits="0" branch="false" />
                 <line number="25" hits="0" branch="false" />
                 <line number="26" hits="0" branch="false" />
                 <line number="27" hits="0" branch="false" />
+                <line number="28" hits="0" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="24" hits="0" branch="false" />
             <line number="25" hits="0" branch="false" />
             <line number="26" hits="0" branch="false" />
             <line number="27" hits="0" branch="false" />
-            <line number="29" hits="0" branch="false" />
-            <line number="33" hits="0" branch="false" />
+            <line number="28" hits="0" branch="false" />
+            <line number="30" hits="0" branch="false" />
             <line number="34" hits="0" branch="false" />
-            <line number="37" hits="0" branch="false" />
-            <line number="40" hits="0" branch="false" />
-            <line number="41" hits="0" branch="false" />
+            <line number="35" hits="0" branch="false" />
+            <line number="36" hits="0" branch="false" />
+            <line number="39" hits="0" branch="false" />
             <line number="42" hits="0" branch="false" />
-            <line number="43" hits="0" branch="false" />
+            <line number="44" hits="0" branch="false" />
             <line number="45" hits="0" branch="false" />
+            <line number="46" hits="0" branch="false" />
+            <line number="48" hits="0" branch="false" />
             <line number="49" hits="0" branch="false" />
-            <line number="50" hits="0" branch="true" condition-coverage="0% (0/2)" />
             <line number="51" hits="0" branch="false" />
             <line number="52" hits="0" branch="false" />
             <line number="53" hits="0" branch="false" />
-            <line number="55" hits="0" branch="false" />
             <line number="57" hits="0" branch="false" />
+            <line number="58" hits="0" branch="true" condition-coverage="0% (0/2)" />
             <line number="59" hits="0" branch="false" />
+            <line number="60" hits="0" branch="false" />
             <line number="61" hits="0" branch="false" />
-            <line number="62" hits="0" branch="false" />
             <line number="63" hits="0" branch="false" />
-            <line number="64" hits="0" branch="false" />
+            <line number="65" hits="0" branch="false" />
             <line number="67" hits="0" branch="false" />
-            <line number="68" hits="0" branch="false" />
             <line number="69" hits="0" branch="false" />
+            <line number="70" hits="0" branch="false" />
             <line number="71" hits="0" branch="false" />
             <line number="72" hits="0" branch="false" />
-            <line number="73" hits="0" branch="false" />
+            <line number="75" hits="0" branch="false" />
             <line number="76" hits="0" branch="false" />
             <line number="77" hits="0" branch="false" />
-            <line number="78" hits="0" branch="false" />
             <line number="79" hits="0" branch="false" />
             <line number="80" hits="0" branch="false" />
-            <line number="81" hits="0" branch="false" />
-            <line number="82" hits="0" branch="false" />
             <line number="83" hits="0" branch="false" />
             <line number="84" hits="0" branch="false" />
             <line number="85" hits="0" branch="false" />
             <line number="86" hits="0" branch="false" />
             <line number="87" hits="0" branch="false" />
             <line number="88" hits="0" branch="false" />
-            <line number="89" hits="0" branch="false" />
-            <line number="90" hits="0" branch="false" />
             <line number="91" hits="0" branch="false" />
             <line number="92" hits="0" branch="false" />
             <line number="93" hits="0" branch="false" />
@@ -509,54 +567,118 @@
             <line number="122" hits="0" branch="false" />
             <line number="123" hits="0" branch="false" />
             <line number="124" hits="0" branch="false" />
+            <line number="125" hits="0" branch="false" />
             <line number="126" hits="0" branch="false" />
             <line number="127" hits="0" branch="false" />
             <line number="128" hits="0" branch="false" />
             <line number="129" hits="0" branch="false" />
+            <line number="130" hits="0" branch="false" />
             <line number="131" hits="0" branch="false" />
             <line number="132" hits="0" branch="false" />
+            <line number="133" hits="0" branch="false" />
+            <line number="134" hits="0" branch="false" />
+            <line number="135" hits="0" branch="false" />
+            <line number="136" hits="0" branch="false" />
+            <line number="137" hits="0" branch="false" />
+            <line number="138" hits="0" branch="false" />
+            <line number="139" hits="0" branch="false" />
+            <line number="141" hits="0" branch="false" />
+            <line number="142" hits="0" branch="false" />
+            <line number="143" hits="0" branch="false" />
+            <line number="144" hits="0" branch="false" />
+            <line number="146" hits="0" branch="false" />
+            <line number="147" hits="0" branch="false" />
+            <line number="150" hits="0" branch="false" />
+            <line number="151" hits="0" branch="false" />
+            <line number="152" hits="0" branch="false" />
+            <line number="153" hits="0" branch="false" />
+            <line number="154" hits="0" branch="false" />
+            <line number="155" hits="0" branch="false" />
+            <line number="156" hits="0" branch="false" />
+            <line number="157" hits="0" branch="false" />
+            <line number="158" hits="0" branch="false" />
+            <line number="159" hits="0" branch="false" />
+            <line number="160" hits="0" branch="false" />
+            <line number="161" hits="0" branch="false" />
+            <line number="162" hits="0" branch="false" />
+            <line number="163" hits="0" branch="false" />
+            <line number="164" hits="0" branch="false" />
+            <line number="165" hits="0" branch="false" />
+            <line number="166" hits="0" branch="false" />
+            <line number="167" hits="0" branch="false" />
+            <line number="168" hits="0" branch="false" />
           </lines>
         </class>
       </classes>
     </package>
-    <package name="Accounts.ApplicationServices" line-rate="0.45454545454545453" branch-rate="0" complexity="6">
+    <package name="Accounts.ApplicationServices" line-rate="0.2702702702702703" branch-rate="0" complexity="8">
       <classes>
-        <class name="Accounts.ApplicationServices.AccountApplicationService" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.ApplicationServices\AccountApplicationService.cs" line-rate="0" branch-rate="0" complexity="3">
+        <class name="Accounts.ApplicationServices.AccountApplicationService" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.ApplicationServices\AccountApplicationService.cs" line-rate="0" branch-rate="0" complexity="5">
           <methods>
-            <method name="CreateAccount" signature="(...)" line-rate="0" branch-rate="0" complexity="2">
+            <method name="CreateAccount" signature="(...)" line-rate="0" branch-rate="0" complexity="4">
               <lines>
-                <line number="18" hits="0" branch="false" />
-                <line number="19" hits="0" branch="false" />
-                <line number="22" hits="0" branch="false" />
-                <line number="24" hits="0" branch="true" condition-coverage="0% (0/2)" />
                 <line number="25" hits="0" branch="false" />
+                <line number="26" hits="0" branch="false" />
                 <line number="29" hits="0" branch="false" />
-                <line number="31" hits="0" branch="false" />
+                <line number="31" hits="0" branch="true" condition-coverage="0% (0/2)" />
                 <line number="32" hits="0" branch="false" />
+                <line number="34" hits="0" branch="false" />
+                <line number="35" hits="0" branch="false" />
+                <line number="37" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="38" hits="0" branch="false" />
+                <line number="39" hits="0" branch="false" />
+                <line number="40" hits="0" branch="false" />
+                <line number="43" hits="0" branch="false" />
+                <line number="44" hits="0" branch="false" />
+                <line number="45" hits="0" branch="false" />
+                <line number="46" hits="0" branch="false" />
+                <line number="48" hits="0" branch="false" />
+                <line number="49" hits="0" branch="false" />
               </lines>
             </method>
             <method name=".ctor" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="12" hits="0" branch="false" />
                 <line number="13" hits="0" branch="false" />
                 <line number="14" hits="0" branch="false" />
                 <line number="15" hits="0" branch="false" />
+                <line number="16" hits="0" branch="false" />
+                <line number="17" hits="0" branch="false" />
+                <line number="18" hits="0" branch="false" />
+                <line number="19" hits="0" branch="false" />
+                <line number="20" hits="0" branch="false" />
+                <line number="21" hits="0" branch="false" />
+                <line number="22" hits="0" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="12" hits="0" branch="false" />
             <line number="13" hits="0" branch="false" />
             <line number="14" hits="0" branch="false" />
             <line number="15" hits="0" branch="false" />
+            <line number="16" hits="0" branch="false" />
+            <line number="17" hits="0" branch="false" />
             <line number="18" hits="0" branch="false" />
             <line number="19" hits="0" branch="false" />
+            <line number="20" hits="0" branch="false" />
+            <line number="21" hits="0" branch="false" />
             <line number="22" hits="0" branch="false" />
-            <line number="24" hits="0" branch="true" condition-coverage="0% (0/2)" />
             <line number="25" hits="0" branch="false" />
+            <line number="26" hits="0" branch="false" />
             <line number="29" hits="0" branch="false" />
-            <line number="31" hits="0" branch="false" />
+            <line number="31" hits="0" branch="true" condition-coverage="0% (0/2)" />
             <line number="32" hits="0" branch="false" />
+            <line number="34" hits="0" branch="false" />
+            <line number="35" hits="0" branch="false" />
+            <line number="37" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="38" hits="0" branch="false" />
+            <line number="39" hits="0" branch="false" />
+            <line number="40" hits="0" branch="false" />
+            <line number="43" hits="0" branch="false" />
+            <line number="44" hits="0" branch="false" />
+            <line number="45" hits="0" branch="false" />
+            <line number="46" hits="0" branch="false" />
+            <line number="48" hits="0" branch="false" />
+            <line number="49" hits="0" branch="false" />
           </lines>
         </class>
         <class name="Accounts.ApplicationServices.CustomerApplicationService" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.ApplicationServices\CustomerApplicationService.cs" line-rate="1" branch-rate="1" complexity="3">
@@ -599,13 +721,13 @@
         </class>
       </classes>
     </package>
-    <package name="Accounts.Domain" line-rate="0.875" branch-rate="1" complexity="16">
+    <package name="Accounts.Domain" line-rate="0.9375" branch-rate="1" complexity="16">
       <classes>
-        <class name="Accounts.Domain.Entities.Account" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.Domain\Entities\Account.cs" line-rate="0.75" branch-rate="1" complexity="4">
+        <class name="Accounts.Domain.Entities.Account" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.Domain\Entities\Account.cs" line-rate="1" branch-rate="1" complexity="4">
           <methods>
-            <method name="get_Id" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="10" hits="0" branch="false" />
+                <line number="10" hits="2" branch="false" />
               </lines>
             </method>
             <method name="get_AccountNumber" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -625,7 +747,7 @@
             </method>
           </methods>
           <lines>
-            <line number="10" hits="0" branch="false" />
+            <line number="10" hits="2" branch="false" />
             <line number="11" hits="8" branch="false" />
             <line number="12" hits="8" branch="false" />
             <line number="13" hits="3" branch="false" />
@@ -710,7 +832,7 @@
             </method>
             <method name="get_Accounts" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="12" hits="2" branch="false" />
+                <line number="12" hits="8" branch="false" />
               </lines>
             </method>
           </methods>
@@ -718,19 +840,17 @@
             <line number="9" hits="16" branch="false" />
             <line number="10" hits="15" branch="false" />
             <line number="11" hits="15" branch="false" />
-            <line number="12" hits="2" branch="false" />
+            <line number="12" hits="8" branch="false" />
           </lines>
         </class>
       </classes>
     </package>
-    <package name="Accounts.DomainServices" line-rate="1" branch-rate="1" complexity="5">
+    <package name="Accounts.DomainServices" line-rate="0.5555555555555556" branch-rate="0.5" complexity="11">
       <classes>
-        <class name="Accounts.DomainServices.AccountService" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.DomainServices\AccountService.cs" line-rate="1" branch-rate="1" complexity="2">
+        <class name="Accounts.DomainServices.AccountService" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.DomainServices\AccountService.cs" line-rate="0.6538461538461539" branch-rate="0" complexity="4">
           <methods>
             <method name="CreateAccount" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="18" hits="2" branch="false" />
-                <line number="19" hits="2" branch="false" />
                 <line number="20" hits="2" branch="false" />
                 <line number="21" hits="2" branch="false" />
                 <line number="22" hits="2" branch="false" />
@@ -739,27 +859,40 @@
                 <line number="25" hits="2" branch="false" />
                 <line number="26" hits="2" branch="false" />
                 <line number="27" hits="2" branch="false" />
+                <line number="28" hits="2" branch="false" />
                 <line number="29" hits="2" branch="false" />
-                <line number="30" hits="2" branch="false" />
                 <line number="31" hits="2" branch="false" />
+                <line number="32" hits="2" branch="false" />
+                <line number="33" hits="2" branch="false" />
+              </lines>
+            </method>
+            <method name="AddTransaction" signature="(...)" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="36" hits="0" branch="false" />
+                <line number="37" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="38" hits="0" branch="false" />
+                <line number="39" hits="0" branch="false" />
+                <line number="40" hits="0" branch="false" />
+                <line number="42" hits="0" branch="false" />
+                <line number="43" hits="0" branch="false" />
+                <line number="44" hits="0" branch="false" />
+                <line number="45" hits="0" branch="false" />
               </lines>
             </method>
             <method name=".ctor" signature="(...)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="12" hits="2" branch="false" />
-                <line number="13" hits="2" branch="false" />
                 <line number="14" hits="2" branch="false" />
                 <line number="15" hits="2" branch="false" />
+                <line number="16" hits="2" branch="false" />
+                <line number="17" hits="2" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="12" hits="2" branch="false" />
-            <line number="13" hits="2" branch="false" />
             <line number="14" hits="2" branch="false" />
             <line number="15" hits="2" branch="false" />
-            <line number="18" hits="2" branch="false" />
-            <line number="19" hits="2" branch="false" />
+            <line number="16" hits="2" branch="false" />
+            <line number="17" hits="2" branch="false" />
             <line number="20" hits="2" branch="false" />
             <line number="21" hits="2" branch="false" />
             <line number="22" hits="2" branch="false" />
@@ -768,12 +901,75 @@
             <line number="25" hits="2" branch="false" />
             <line number="26" hits="2" branch="false" />
             <line number="27" hits="2" branch="false" />
+            <line number="28" hits="2" branch="false" />
             <line number="29" hits="2" branch="false" />
-            <line number="30" hits="2" branch="false" />
             <line number="31" hits="2" branch="false" />
+            <line number="32" hits="2" branch="false" />
+            <line number="33" hits="2" branch="false" />
+            <line number="36" hits="0" branch="false" />
+            <line number="37" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="38" hits="0" branch="false" />
+            <line number="39" hits="0" branch="false" />
+            <line number="40" hits="0" branch="false" />
+            <line number="42" hits="0" branch="false" />
+            <line number="43" hits="0" branch="false" />
+            <line number="44" hits="0" branch="false" />
+            <line number="45" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Accounts.DomainServices.CustomerService" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.DomainServices\CustomerService.cs" line-rate="1" branch-rate="1" complexity="3">
+        <class name="Accounts.DomainServices.AccountTransactionService" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.DomainServices\AccountTransactionService.cs" line-rate="0" branch-rate="1" complexity="2">
+          <methods>
+            <method name="RegisterTransaction" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="0" branch="false" />
+                <line number="20" hits="0" branch="false" />
+                <line number="21" hits="0" branch="false" />
+                <line number="22" hits="0" branch="false" />
+                <line number="23" hits="0" branch="false" />
+                <line number="24" hits="0" branch="false" />
+                <line number="25" hits="0" branch="false" />
+                <line number="26" hits="0" branch="false" />
+                <line number="27" hits="0" branch="false" />
+                <line number="28" hits="0" branch="false" />
+                <line number="29" hits="0" branch="false" />
+                <line number="30" hits="0" branch="false" />
+                <line number="32" hits="0" branch="false" />
+                <line number="34" hits="0" branch="false" />
+                <line number="35" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="0" branch="false" />
+                <line number="14" hits="0" branch="false" />
+                <line number="15" hits="0" branch="false" />
+                <line number="16" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="0" branch="false" />
+            <line number="14" hits="0" branch="false" />
+            <line number="15" hits="0" branch="false" />
+            <line number="16" hits="0" branch="false" />
+            <line number="19" hits="0" branch="false" />
+            <line number="20" hits="0" branch="false" />
+            <line number="21" hits="0" branch="false" />
+            <line number="22" hits="0" branch="false" />
+            <line number="23" hits="0" branch="false" />
+            <line number="24" hits="0" branch="false" />
+            <line number="25" hits="0" branch="false" />
+            <line number="26" hits="0" branch="false" />
+            <line number="27" hits="0" branch="false" />
+            <line number="28" hits="0" branch="false" />
+            <line number="29" hits="0" branch="false" />
+            <line number="30" hits="0" branch="false" />
+            <line number="32" hits="0" branch="false" />
+            <line number="34" hits="0" branch="false" />
+            <line number="35" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="Accounts.DomainServices.CustomerService" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.DomainServices\CustomerService.cs" line-rate="1" branch-rate="1" complexity="5">
           <methods>
             <method name="GetCustomers" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -789,26 +985,46 @@
                 <line number="26" hits="3" branch="false" />
               </lines>
             </method>
+            <method name="AddAccount" signature="(...)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="29" hits="2" branch="false" />
+                <line number="30" hits="2" branch="true" condition-coverage="100% (2/2)" />
+                <line number="31" hits="1" branch="false" />
+                <line number="32" hits="1" branch="false" />
+                <line number="33" hits="1" branch="false" />
+                <line number="35" hits="2" branch="false" />
+                <line number="36" hits="2" branch="false" />
+                <line number="37" hits="2" branch="false" />
+              </lines>
+            </method>
             <method name=".ctor" signature="(...)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="13" hits="6" branch="false" />
-                <line number="14" hits="6" branch="false" />
-                <line number="15" hits="6" branch="false" />
-                <line number="16" hits="6" branch="false" />
+                <line number="13" hits="8" branch="false" />
+                <line number="14" hits="8" branch="false" />
+                <line number="15" hits="8" branch="false" />
+                <line number="16" hits="8" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="13" hits="6" branch="false" />
-            <line number="14" hits="6" branch="false" />
-            <line number="15" hits="6" branch="false" />
-            <line number="16" hits="6" branch="false" />
+            <line number="13" hits="8" branch="false" />
+            <line number="14" hits="8" branch="false" />
+            <line number="15" hits="8" branch="false" />
+            <line number="16" hits="8" branch="false" />
             <line number="19" hits="3" branch="false" />
             <line number="20" hits="3" branch="false" />
             <line number="21" hits="3" branch="false" />
             <line number="24" hits="3" branch="false" />
             <line number="25" hits="4" branch="false" />
             <line number="26" hits="3" branch="false" />
+            <line number="29" hits="2" branch="false" />
+            <line number="30" hits="2" branch="true" condition-coverage="100% (2/2)" />
+            <line number="31" hits="1" branch="false" />
+            <line number="32" hits="1" branch="false" />
+            <line number="33" hits="1" branch="false" />
+            <line number="35" hits="2" branch="false" />
+            <line number="36" hits="2" branch="false" />
+            <line number="37" hits="2" branch="false" />
           </lines>
         </class>
       </classes>
@@ -915,7 +1131,7 @@
         </class>
       </classes>
     </package>
-    <package name="Accounts.UnitTests" line-rate="0.9925650557620818" branch-rate="1" complexity="26">
+    <package name="Accounts.UnitTests" line-rate="0.9930313588850174" branch-rate="1" complexity="28">
       <classes>
         <class name="Accounts.UnitTests.ApplicationServices.CustomerApplicationServiceUnitTests" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.UnitTests\ApplicationServices\CustomerApplicationServiceUnitTests.cs" line-rate="1" branch-rate="1" complexity="7">
           <methods>
@@ -1063,66 +1279,66 @@
           <methods>
             <method name="Init" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
+                <line number="19" hits="2" branch="false" />
                 <line number="20" hits="2" branch="false" />
                 <line number="21" hits="2" branch="false" />
                 <line number="22" hits="2" branch="false" />
-                <line number="23" hits="2" branch="false" />
               </lines>
             </method>
             <method name="WhenCreateAccountShouldInvokeRepository" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="29" hits="1" branch="false" />
+                <line number="28" hits="1" branch="false" />
+                <line number="30" hits="1" branch="false" />
                 <line number="31" hits="1" branch="false" />
                 <line number="32" hits="1" branch="false" />
-                <line number="33" hits="1" branch="false" />
-                <line number="36" hits="1" branch="false" />
+                <line number="35" hits="1" branch="false" />
+                <line number="38" hits="1" branch="false" />
                 <line number="39" hits="1" branch="false" />
-                <line number="40" hits="1" branch="false" />
               </lines>
             </method>
             <method name="WhenCreateAccountShouldReturnAccount" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="44" hits="1" branch="false" />
+                <line number="43" hits="1" branch="false" />
+                <line number="45" hits="1" branch="false" />
                 <line number="46" hits="1" branch="false" />
                 <line number="47" hits="1" branch="false" />
-                <line number="48" hits="1" branch="false" />
-                <line number="51" hits="1" branch="false" />
+                <line number="50" hits="1" branch="false" />
+                <line number="53" hits="1" branch="false" />
                 <line number="54" hits="1" branch="false" />
                 <line number="55" hits="1" branch="false" />
-                <line number="56" hits="1" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
+            <line number="19" hits="2" branch="false" />
             <line number="20" hits="2" branch="false" />
             <line number="21" hits="2" branch="false" />
             <line number="22" hits="2" branch="false" />
-            <line number="23" hits="2" branch="false" />
-            <line number="29" hits="1" branch="false" />
+            <line number="28" hits="1" branch="false" />
+            <line number="30" hits="1" branch="false" />
             <line number="31" hits="1" branch="false" />
             <line number="32" hits="1" branch="false" />
-            <line number="33" hits="1" branch="false" />
-            <line number="36" hits="1" branch="false" />
+            <line number="35" hits="1" branch="false" />
+            <line number="38" hits="1" branch="false" />
             <line number="39" hits="1" branch="false" />
-            <line number="40" hits="1" branch="false" />
-            <line number="44" hits="1" branch="false" />
+            <line number="43" hits="1" branch="false" />
+            <line number="45" hits="1" branch="false" />
             <line number="46" hits="1" branch="false" />
             <line number="47" hits="1" branch="false" />
-            <line number="48" hits="1" branch="false" />
-            <line number="51" hits="1" branch="false" />
+            <line number="50" hits="1" branch="false" />
+            <line number="53" hits="1" branch="false" />
             <line number="54" hits="1" branch="false" />
             <line number="55" hits="1" branch="false" />
-            <line number="56" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Accounts.UnitTests.DomainServices.CustomerServiceTests" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.UnitTests\DomainServices\CustomerServiceTests.cs" line-rate="1" branch-rate="1" complexity="7">
+        <class name="Accounts.UnitTests.DomainServices.CustomerServiceTests" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.UnitTests\DomainServices\CustomerServiceTests.cs" line-rate="1" branch-rate="1" complexity="9">
           <methods>
             <method name="Init" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="21" hits="6" branch="false" />
-                <line number="22" hits="6" branch="false" />
-                <line number="23" hits="6" branch="false" />
-                <line number="24" hits="6" branch="false" />
+                <line number="21" hits="8" branch="false" />
+                <line number="22" hits="8" branch="false" />
+                <line number="23" hits="8" branch="false" />
+                <line number="24" hits="8" branch="false" />
               </lines>
             </method>
             <method name="WhenGetCustomersShouldInvokeRepository" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -1208,12 +1424,38 @@
                 <line number="146" hits="1" branch="false" />
               </lines>
             </method>
+            <method name="WhenAddAccountWithNullTransactionsShouldInvokeRepository" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="154" hits="1" branch="false" />
+                <line number="156" hits="1" branch="false" />
+                <line number="157" hits="1" branch="false" />
+                <line number="159" hits="1" branch="false" />
+                <line number="160" hits="1" branch="false" />
+                <line number="161" hits="1" branch="false" />
+                <line number="164" hits="1" branch="false" />
+                <line number="167" hits="1" branch="false" />
+                <line number="168" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="WhenAddAccountShouldInvokeRepository" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="172" hits="1" branch="false" />
+                <line number="174" hits="1" branch="false" />
+                <line number="175" hits="1" branch="false" />
+                <line number="177" hits="1" branch="false" />
+                <line number="178" hits="1" branch="false" />
+                <line number="179" hits="1" branch="false" />
+                <line number="182" hits="1" branch="false" />
+                <line number="185" hits="1" branch="false" />
+                <line number="186" hits="1" branch="false" />
+              </lines>
+            </method>
           </methods>
           <lines>
-            <line number="21" hits="6" branch="false" />
-            <line number="22" hits="6" branch="false" />
-            <line number="23" hits="6" branch="false" />
-            <line number="24" hits="6" branch="false" />
+            <line number="21" hits="8" branch="false" />
+            <line number="22" hits="8" branch="false" />
+            <line number="23" hits="8" branch="false" />
+            <line number="24" hits="8" branch="false" />
             <line number="30" hits="1" branch="false" />
             <line number="32" hits="1" branch="false" />
             <line number="33" hits="1" branch="false" />
@@ -1273,6 +1515,24 @@
             <line number="144" hits="1" branch="false" />
             <line number="145" hits="1" branch="false" />
             <line number="146" hits="1" branch="false" />
+            <line number="154" hits="1" branch="false" />
+            <line number="156" hits="1" branch="false" />
+            <line number="157" hits="1" branch="false" />
+            <line number="159" hits="1" branch="false" />
+            <line number="160" hits="1" branch="false" />
+            <line number="161" hits="1" branch="false" />
+            <line number="164" hits="1" branch="false" />
+            <line number="167" hits="1" branch="false" />
+            <line number="168" hits="1" branch="false" />
+            <line number="172" hits="1" branch="false" />
+            <line number="174" hits="1" branch="false" />
+            <line number="175" hits="1" branch="false" />
+            <line number="177" hits="1" branch="false" />
+            <line number="178" hits="1" branch="false" />
+            <line number="179" hits="1" branch="false" />
+            <line number="182" hits="1" branch="false" />
+            <line number="185" hits="1" branch="false" />
+            <line number="186" hits="1" branch="false" />
           </lines>
         </class>
         <class name="Accounts.UnitTests.Infrastructure.RepositoryTests" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.UnitTests\Infrastructure\RepositoryTests.cs" line-rate="1" branch-rate="1" complexity="5">
@@ -1395,7 +1655,7 @@
             <line number="114" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Accounts.UnitTests.Mappers.CustomerMapperTests" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.UnitTests\Mappers\CustomerMapperTests.cs" line-rate="0.9882352941176471" branch-rate="1" complexity="3">
+        <class name="Accounts.UnitTests.Mappers.CustomerApplicationServiceMapperTests" filename="C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.UnitTests\Mappers\CustomerApplicationServiceMapperTests.cs" line-rate="0.9882352941176471" branch-rate="1" complexity="3">
           <methods>
             <method name="Init" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
