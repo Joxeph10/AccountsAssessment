@@ -129,3 +129,7 @@ C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.U
 C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.UnitTests\obj\Debug\netcoreapp3.1\Accounts.UnitTests.dll
 C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.UnitTests\obj\Debug\netcoreapp3.1\Accounts.UnitTests.pdb
 C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.UnitTests\obj\Debug\netcoreapp3.1\Accounts.UnitTests.genruntimeconfig.cache
+C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.UnitTests\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.UnitTests\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.UnitTests\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.UnitTests\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll

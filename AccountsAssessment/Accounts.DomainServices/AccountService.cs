@@ -4,6 +4,8 @@
     using Accounts.Domain.Interfaces.DataAccess;
     using Accounts.Domain.Interfaces.DomainServices;
     using System;
+    using System.Collections.Generic;
+    using System.Linq;
 
     public class AccountService : IAccountService
     {
@@ -28,6 +30,18 @@
 
             this._repository.Add<Account>(newAccount);
             return newAccount;
+        }
+
+        public void AddTransaction(Account account, AccountTransaction accountTransaction)
+        {
+            if (account.AccountTransactions == null)
+            {
+                account.AccountTransactions = new List<AccountTransaction>();
+            }
+
+            account.AccountTransactions.Add(accountTransaction);
+            account.Balance = account.AccountTransactions.Sum(t => t.Amount);
+            this._repository.SaveChanges();
         }
     }
 }

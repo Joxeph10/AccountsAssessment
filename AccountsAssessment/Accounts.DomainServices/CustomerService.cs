@@ -27,6 +27,11 @@
 
         public void AddAccount(Customer customer, Account account)
         {
+            if (customer.Accounts == null)
+            {
+                customer.Accounts = new List<Account>();
+            }
+
             customer.Accounts.Add(account);
             this._repository.SaveChanges();
         }

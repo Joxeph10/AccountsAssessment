@@ -1,18 +1,23 @@
-﻿using Accounts.API.Dto.Account;
-using Accounts.API.Interfaces;
-using Accounts.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Accounts.API.Mappers
+﻿namespace Accounts.API.Mappers
 {
+    using Accounts.API.Dto.Account;
+    using Accounts.API.Interfaces;
+    using Accounts.Domain.Entities;
+
     public class AccountApplicationServiceMapper : IAccountApplicationServiceMapper
     {
         public AccountCreationResponse MapToAccountCreationResponse(Account newAccount)
         {
-            throw new NotImplementedException();
+            var response = new AccountCreationResponse();
+
+            if (newAccount != null)
+            {
+                response.AccountNumber = newAccount.AccountNumber.ToString();
+                response.Balance = $"{newAccount.Balance} Credits";
+                response.Message = $"The account {newAccount.AccountNumber} was successfuly created.";
+            }
+
+            return response;
         }
     }
 }

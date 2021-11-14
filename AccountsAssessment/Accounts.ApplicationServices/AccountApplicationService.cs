@@ -8,17 +8,20 @@
     {
         private readonly ICustomerService _customerService;
         private readonly IAccountService _accountService;
+        private readonly IAccountTransactionService _accountTransactionService;
 
         public AccountApplicationService(
             ICustomerService customerService,
-            IAccountService accountService
+            IAccountService accountService,
+            IAccountTransactionService accountTransactionService
             )
         {
             this._customerService = customerService;
             this._accountService = accountService;
+            this._accountTransactionService = accountTransactionService;
         }
 
-        public Account CreateAccount(int customerId)
+        public Account CreateAccount(int customerId, double initialCredit)
         {
             Account newAccount = null;
 
@@ -31,7 +34,15 @@
                 newAccount = this._accountService.CreateAccount();
                 this._customerService.AddAccount(customer, newAccount);
 
-                // invoke transactions services to enter a new transaction
+                if (initialCredit > 0)
+                {
+                    var transactionType = Domain.Enumerations.ETransactionTypes.Credit;
+                    var comment = "Account Creation";
+
+                    // invoke transactions services to enter a new transaction
+                    var transaction = this._accountTransactionService.RegisterTransaction(transactionType, initialCredit, comment);
+                    this._accountService.AddTransaction(newAccount, transaction);
+                }
             }
 
             return newAccount;

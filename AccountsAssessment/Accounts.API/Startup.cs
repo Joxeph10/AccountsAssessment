@@ -43,6 +43,7 @@ namespace Accounts.API
 
             services.AddTransient<ICustomerService, CustomerService>();
             services.AddTransient<IAccountService, AccountService>();
+            services.AddTransient<IAccountTransactionService, AccountTransactionService>();
 
             services.AddTransient<ICustomerApplicationService, CustomerApplicationService>();
             services.AddTransient<IAccountApplicationService, AccountApplicationService>();

@@ -54,7 +54,7 @@
         public AccountCreationResponse CreateAccount(int customerId, double initialCredit)
         {
             // Invoke accounts application service to create new account
-            var result = this._accountApplicationService.CreateAccount(customerId);
+            var result = this._accountApplicationService.CreateAccount(customerId, initialCredit);
 
             // Invoke mapper to generate a response DTO
             var response = this._accountApplicationServiceMapper.MapToAccountCreationResponse(result);
