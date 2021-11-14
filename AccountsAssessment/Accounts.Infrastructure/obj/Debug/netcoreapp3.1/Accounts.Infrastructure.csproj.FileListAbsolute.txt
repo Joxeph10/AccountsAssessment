@@ -1,0 +1,12 @@
+C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.Infrastructure\bin\Debug\netcoreapp3.1\Accounts.Infrastructure.deps.json
+C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.Infrastructure\bin\Debug\netcoreapp3.1\Accounts.Infrastructure.dll
+C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.Infrastructure\bin\Debug\netcoreapp3.1\Accounts.Infrastructure.pdb
+C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.Infrastructure\bin\Debug\netcoreapp3.1\Accounts.Domain.dll
+C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.Infrastructure\bin\Debug\netcoreapp3.1\Accounts.Domain.pdb
+C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.Infrastructure\obj\Debug\netcoreapp3.1\Accounts.Infrastructure.csprojAssemblyReference.cache
+C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.Infrastructure\obj\Debug\netcoreapp3.1\Accounts.Infrastructure.AssemblyInfoInputs.cache
+C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.Infrastructure\obj\Debug\netcoreapp3.1\Accounts.Infrastructure.AssemblyInfo.cs
+C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.Infrastructure\obj\Debug\netcoreapp3.1\Accounts.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.Infrastructure\obj\Debug\netcoreapp3.1\Accounts.Infrastructure.csproj.CopyComplete
+C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.Infrastructure\obj\Debug\netcoreapp3.1\Accounts.Infrastructure.dll
+C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.Infrastructure\obj\Debug\netcoreapp3.1\Accounts.Infrastructure.pdb
