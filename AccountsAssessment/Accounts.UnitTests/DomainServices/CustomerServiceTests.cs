@@ -11,7 +11,7 @@
     using System.Linq;
 
     [TestClass]
-    class CustomerServiceTests
+    public class CustomerServiceTests
     {
         private ICustomerService _sut;
         private Mock<IRepository> _mockIRepository;

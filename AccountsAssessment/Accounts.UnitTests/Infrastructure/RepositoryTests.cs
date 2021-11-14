@@ -6,11 +6,10 @@ namespace Accounts.UnitTests.Infrastructure
     using FluentAssertions;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using Moq;
     using System.Linq;
 
     [TestClass]
-    class RepositoryTests
+    public class RepositoryTests
     {
         [TestInitialize]
         public void Init()

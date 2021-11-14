@@ -9,10 +9,9 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using System;
     using System.Collections.Generic;
-    using System.Linq;
 
     [TestClass]
-    class CustomerMapperTests
+    public class CustomerMapperTests
     {
         private ICustomerMapper _sut;
 
