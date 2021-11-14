@@ -10,13 +10,15 @@
     {
         public CustomerResponse GetCustomerResponse(Customer customer)
         {
-            var response = new CustomerResponse
+            var response = new CustomerResponse();
+
+            if (customer != null)
             {
-                Name = customer.Name,
-                Surname = customer.Surname,
-                FullName = $"{customer.Name} {customer.Surname}",
-                Accounts = customer.Accounts.OrderBy(o => o.CreatedDate).Select(a => GetAccountsResponse(a))
-            };
+                response.Name = customer.Name;
+                response.Surname = customer.Surname;
+                response.FullName = $"{customer.Name} {customer.Surname}";
+                response.Accounts = customer.Accounts.OrderBy(o => o.CreatedDate).Select(a => GetAccountsResponse(a));
+            }
 
             return response;
         }

@@ -112,6 +112,20 @@
             result.Should().BeEquivalentTo(expectedResult);
         }
 
+        [TestMethod]
+        public void WhenGetCustomerResponseShouldReturnEmptyCustomerResponse()
+        {
+            /// Arrange
+            Customer customer1 = null;
+            var expectedResult = new CustomerResponse();
+
+            /// Action
+            var result = this._sut.GetCustomerResponse(customer1);
+
+            /// Assert 
+            result.Should().BeEquivalentTo(expectedResult);
+        }
+
         #endregion GetCustomerResponse
 
     }
