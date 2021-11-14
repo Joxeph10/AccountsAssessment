@@ -10,6 +10,6 @@
         public int Id { get; set; }
         public Guid AccountNumber { get; set; }
         public double Balance { get; set; }
-        public virtual IEnumerable<AccountTransaction> AccountTransactions { get; set; }
+        public virtual List<AccountTransaction> AccountTransactions { get; set; }
     }
 }
