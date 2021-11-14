@@ -51,9 +51,8 @@
 
         [Route("{customerId}/account")]
         [HttpPost]
-        public AccountCreationResponse CreateAccount(int customerId)
+        public AccountCreationResponse CreateAccount(int customerId, double initialCredit)
         {
-            // TODO: 
             // Invoke accounts application service to create new account
             var result = this._accountApplicationService.CreateAccount(customerId);
 

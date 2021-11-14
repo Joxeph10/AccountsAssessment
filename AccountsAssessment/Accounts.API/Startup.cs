@@ -14,6 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 
@@ -32,6 +33,7 @@ namespace Accounts.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            AddSwagger(services);
 
             // Configure Data Provider
             services.AddDbContext<AccountsDataContext>(options => options.UseInMemoryDatabase(databaseName: "AccountsDataBase"));
@@ -75,6 +77,13 @@ namespace Accounts.API
 
             var context = new AccountsDataContext(options);
             DataInitialize(context);
+
+            // Swagger Configuration
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Accounts API V1");
+            });
         }
 
         private static void DataInitialize(AccountsDataContext context)
@@ -134,6 +143,27 @@ namespace Accounts.API
             context.Customers.Add(customer4);
 
             context.SaveChanges();
+        }
+
+        private void AddSwagger(IServiceCollection services)
+        {
+            services.AddSwaggerGen(options =>
+            {
+                var groupName = "v1";
+
+                options.SwaggerDoc(groupName, new OpenApiInfo
+                {
+                    Title = $"Accounts Assessment API {groupName}",
+                    Version = groupName,
+                    Description = "This is a trainning API to create customer accounts.",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Jose Luis Lopez",
+                        Email = "josco17@gmail.com",
+                        Url = new Uri("https://github.com/Joxeph10/AccountsAssessment")
+                    }
+                });
+            });
         }
     }
 }

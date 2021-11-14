@@ -29,7 +29,6 @@
             {
                 // invoke account service to create new account
                 newAccount = this._accountService.CreateAccount();
-
                 this._customerService.AddAccount(customer, newAccount);
 
                 // invoke transactions services to enter a new transaction
