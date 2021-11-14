@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 3.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./AccountsAssessment/AccountsAssessment/
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore ./AccountsAssessment/AccountsAssessment/
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal ./AccountsAssessment/AccountsAssessment/
