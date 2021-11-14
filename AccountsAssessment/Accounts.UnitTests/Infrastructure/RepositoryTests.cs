@@ -10,9 +10,8 @@ namespace Accounts.UnitTests.Infrastructure
     using System.Linq;
 
     [TestClass]
-    public class RepositoryTests
+    class RepositoryTests
     {
-
         [TestInitialize]
         public void Init()
         {
@@ -65,6 +64,7 @@ namespace Accounts.UnitTests.Infrastructure
             result.Should().NotBeEmpty();
             result.First().Should().BeOfType(typeof(Customer));
         }
+
         #endregion GetCustomers
     }
 }

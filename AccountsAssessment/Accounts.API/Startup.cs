@@ -1,6 +1,12 @@
+using Accounts.API.Interfaces;
+using Accounts.API.Mappers;
+using Accounts.ApplicationServices;
 using Accounts.Domain.Entities;
 using Accounts.Domain.Enumerations;
+using Accounts.Domain.Interfaces.ApplicationServices;
 using Accounts.Domain.Interfaces.DataAccess;
+using Accounts.Domain.Interfaces.DomainServices;
+using Accounts.DomainServices;
 using Accounts.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,6 +38,9 @@ namespace Accounts.API
 
             // Dependency Injection Configuration
             services.AddTransient<IRepository, Repository>();
+            services.AddTransient<ICustomerService, CustomerService>();
+            services.AddTransient<ICustomerApplicationService, CustomerApplicationService>();
+            services.AddTransient<ICustomerMapper, CustomerMapper>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
