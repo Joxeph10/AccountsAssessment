@@ -6,4 +6,3 @@ C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.D
 C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.Domain\obj\Debug\netcoreapp3.1\Accounts.Domain.csproj.CoreCompileInputs.cache
 C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.Domain\obj\Debug\netcoreapp3.1\Accounts.Domain.dll
 C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.Domain\obj\Debug\netcoreapp3.1\Accounts.Domain.pdb
-C:\Repositorios\joxeph10-github\AccountsAssessment\AccountsAssessment\Accounts.Domain\obj\Debug\netcoreapp3.1\Accounts.Domain.csprojAssemblyReference.cache
