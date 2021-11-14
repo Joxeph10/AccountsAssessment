@@ -1,6 +1,7 @@
 ﻿namespace Accounts.ApplicationServices
 {
     using Accounts.Domain.Entities;
+    using Accounts.Domain.Enumerations;
     using Accounts.Domain.Interfaces.ApplicationServices;
     using Accounts.Domain.Interfaces.DomainServices;
 
@@ -36,7 +37,7 @@
 
                 if (initialCredit > 0)
                 {
-                    var transactionType = Domain.Enumerations.ETransactionTypes.Credit;
+                    var transactionType = ETransactionTypes.Credit;
                     var comment = "Account Creation";
 
                     // invoke transactions services to enter a new transaction
