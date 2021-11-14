@@ -3,7 +3,7 @@
     using Accounts.API.Dto.Customer;
     using Accounts.Domain.Entities;
 
-    public interface ICustomerMapper
+    public interface ICustomerApplicationServiceMapper
     {
         public CustomerResponse GetCustomerResponse(Customer customer);
 

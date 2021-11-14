@@ -38,9 +38,15 @@ namespace Accounts.API
 
             // Dependency Injection Configuration
             services.AddTransient<IRepository, Repository>();
+
             services.AddTransient<ICustomerService, CustomerService>();
+            services.AddTransient<IAccountService, AccountService>();
+
             services.AddTransient<ICustomerApplicationService, CustomerApplicationService>();
-            services.AddTransient<ICustomerMapper, CustomerMapper>();
+            services.AddTransient<IAccountApplicationService, AccountApplicationService>();
+
+            services.AddTransient<IAccountApplicationServiceMapper, AccountApplicationServiceMapper>();
+            services.AddTransient<ICustomerApplicationServiceMapper, CustomerApplicationServiceMapper>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

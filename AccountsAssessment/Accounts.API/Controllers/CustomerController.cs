@@ -13,13 +13,13 @@
     public class CustomerController : ControllerBase
     {
         private readonly ICustomerApplicationService _customerApplicationService;
-        private readonly ICustomerMapper _customerMapper;
+        private readonly ICustomerApplicationServiceMapper _customerMapper;
         private readonly IAccountApplicationService _accountApplicationService;
         private readonly IAccountApplicationServiceMapper _accountApplicationServiceMapper;
 
         public CustomerController(
             ICustomerApplicationService customerApplicationService,
-            ICustomerMapper customerMapper,
+            ICustomerApplicationServiceMapper customerMapper,
             IAccountApplicationService accountApplicationService,
             IAccountApplicationServiceMapper accountApplicationServiceMapper
             )

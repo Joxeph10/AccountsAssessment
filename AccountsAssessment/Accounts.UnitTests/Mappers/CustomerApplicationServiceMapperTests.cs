@@ -11,14 +11,14 @@
     using System.Collections.Generic;
 
     [TestClass]
-    public class CustomerMapperTests
+    public class CustomerApplicationServiceMapperTests
     {
-        private ICustomerMapper _sut;
+        private ICustomerApplicationServiceMapper _sut;
 
         [TestInitialize]
         public void Init()
         {
-            this._sut = new CustomerMapper();
+            this._sut = new CustomerApplicationServiceMapper();
         }
 
         #region GetCustomerResponse

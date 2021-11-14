@@ -6,7 +6,7 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    public class CustomerMapper : ICustomerMapper
+    public class CustomerApplicationServiceMapper : ICustomerApplicationServiceMapper
     {
         public CustomerResponse GetCustomerResponse(Customer customer)
         {
