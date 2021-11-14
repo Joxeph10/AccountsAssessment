@@ -126,6 +126,5 @@
         }
 
         #endregion GetCustomerResponse
-
     }
 }
