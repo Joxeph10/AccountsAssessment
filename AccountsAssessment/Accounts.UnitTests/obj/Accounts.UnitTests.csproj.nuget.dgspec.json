@@ -4,6 +4,198 @@
     "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.UnitTests\\Accounts.UnitTests.csproj": {}
   },
   "projects": {
+    "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.API\\Accounts.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.API\\Accounts.API.csproj",
+        "projectName": "Accounts.API",
+        "projectPath": "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.API\\Accounts.API.csproj",
+        "packagesPath": "C:\\Users\\jlopez\\.nuget\\packages\\",
+        "outputPath": "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jlopez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.ApplicationServices\\Accounts.ApplicationServices.csproj": {
+                "projectPath": "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.ApplicationServices\\Accounts.ApplicationServices.csproj"
+              },
+              "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.DomainServices\\Accounts.DomainServices.csproj": {
+                "projectPath": "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.DomainServices\\Accounts.DomainServices.csproj"
+              },
+              "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.Infrastructure\\Accounts.Infrastructure.csproj": {
+                "projectPath": "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.Infrastructure\\Accounts.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.206\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.ApplicationServices\\Accounts.ApplicationServices.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.ApplicationServices\\Accounts.ApplicationServices.csproj",
+        "projectName": "Accounts.ApplicationServices",
+        "projectPath": "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.ApplicationServices\\Accounts.ApplicationServices.csproj",
+        "packagesPath": "C:\\Users\\jlopez\\.nuget\\packages\\",
+        "outputPath": "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.ApplicationServices\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jlopez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.Domain\\Accounts.Domain.csproj": {
+                "projectPath": "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.Domain\\Accounts.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.206\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.DomainServices\\Accounts.DomainServices.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.DomainServices\\Accounts.DomainServices.csproj",
+        "projectName": "Accounts.DomainServices",
+        "projectPath": "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.DomainServices\\Accounts.DomainServices.csproj",
+        "packagesPath": "C:\\Users\\jlopez\\.nuget\\packages\\",
+        "outputPath": "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.DomainServices\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jlopez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.Domain\\Accounts.Domain.csproj": {
+                "projectPath": "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.Domain\\Accounts.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.206\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.Domain\\Accounts.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -159,6 +351,15 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
+              "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.API\\Accounts.API.csproj": {
+                "projectPath": "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.API\\Accounts.API.csproj"
+              },
+              "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.ApplicationServices\\Accounts.ApplicationServices.csproj": {
+                "projectPath": "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.ApplicationServices\\Accounts.ApplicationServices.csproj"
+              },
+              "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.DomainServices\\Accounts.DomainServices.csproj": {
+                "projectPath": "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.DomainServices\\Accounts.DomainServices.csproj"
+              },
               "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.Domain\\Accounts.Domain.csproj": {
                 "projectPath": "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.Domain\\Accounts.Domain.csproj"
               },

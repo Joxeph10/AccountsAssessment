@@ -1979,6 +1979,37 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
+      "Accounts.API/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Accounts.ApplicationServices": "1.0.0",
+          "Accounts.DomainServices": "1.0.0",
+          "Accounts.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Accounts.API.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Accounts.API.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Accounts.ApplicationServices/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Accounts.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Accounts.ApplicationServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Accounts.ApplicationServices.dll": {}
+        }
+      },
       "Accounts.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -1987,6 +2018,19 @@
         },
         "runtime": {
           "bin/placeholder/Accounts.Domain.dll": {}
+        }
+      },
+      "Accounts.DomainServices/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Accounts.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Accounts.DomainServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Accounts.DomainServices.dll": {}
         }
       },
       "Accounts.Infrastructure/1.0.0": {
@@ -6808,10 +6852,25 @@
         "system.xml.xmldocument.nuspec"
       ]
     },
+    "Accounts.API/1.0.0": {
+      "type": "project",
+      "path": "../Accounts.API/Accounts.API.csproj",
+      "msbuildProject": "../Accounts.API/Accounts.API.csproj"
+    },
+    "Accounts.ApplicationServices/1.0.0": {
+      "type": "project",
+      "path": "../Accounts.ApplicationServices/Accounts.ApplicationServices.csproj",
+      "msbuildProject": "../Accounts.ApplicationServices/Accounts.ApplicationServices.csproj"
+    },
     "Accounts.Domain/1.0.0": {
       "type": "project",
       "path": "../Accounts.Domain/Accounts.Domain.csproj",
       "msbuildProject": "../Accounts.Domain/Accounts.Domain.csproj"
+    },
+    "Accounts.DomainServices/1.0.0": {
+      "type": "project",
+      "path": "../Accounts.DomainServices/Accounts.DomainServices.csproj",
+      "msbuildProject": "../Accounts.DomainServices/Accounts.DomainServices.csproj"
     },
     "Accounts.Infrastructure/1.0.0": {
       "type": "project",
@@ -6821,7 +6880,10 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Accounts.API >= 1.0.0",
+      "Accounts.ApplicationServices >= 1.0.0",
       "Accounts.Domain >= 1.0.0",
+      "Accounts.DomainServices >= 1.0.0",
       "Accounts.Infrastructure >= 1.0.0",
       "FluentAssertions >= 6.2.0",
       "MSTest.TestAdapter >= 2.1.0",
@@ -6862,6 +6924,15 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
+            "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.API\\Accounts.API.csproj": {
+              "projectPath": "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.API\\Accounts.API.csproj"
+            },
+            "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.ApplicationServices\\Accounts.ApplicationServices.csproj": {
+              "projectPath": "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.ApplicationServices\\Accounts.ApplicationServices.csproj"
+            },
+            "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.DomainServices\\Accounts.DomainServices.csproj": {
+              "projectPath": "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.DomainServices\\Accounts.DomainServices.csproj"
+            },
             "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.Domain\\Accounts.Domain.csproj": {
               "projectPath": "C:\\Repositorios\\joxeph10-github\\AccountsAssessment\\AccountsAssessment\\Accounts.Domain\\Accounts.Domain.csproj"
             },
