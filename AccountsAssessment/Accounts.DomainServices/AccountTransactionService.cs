@@ -15,12 +15,12 @@
             this._repository = repository;
         }
 
-        public AccountTransaction RegisterTransaction(ETransactionTypes transactionType, double amouont, string comment)
+        public AccountTransaction RegisterTransaction(ETransactionTypes transactionType, double amount, string comment)
         {
             var newAccountTrasaction = new AccountTransaction
             {
                 //Account = newAccount,
-                Amount = amouont,
+                Amount = amount,
                 Comment = comment,
                 CreatedDate = DateTime.Now,
                 CreatedByID = 123,  // TODO
