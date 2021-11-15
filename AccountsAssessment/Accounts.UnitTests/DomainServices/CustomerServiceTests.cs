@@ -11,7 +11,7 @@
     using System.Linq;
 
     [TestClass]
-    class CustomerServiceTests
+    public class CustomerServiceTests
     {
         private ICustomerService _sut;
         private Mock<IRepository> _mockIRepository;
@@ -146,5 +146,45 @@
         }
 
         #endregion GetCustomerById
+
+        #region AddAccount
+
+        [TestMethod]
+        public void WhenAddAccountWithNullTransactionsShouldInvokeRepository()
+        {
+            /// Arrange
+            var customer = new Customer();
+            var account = new Account { Id = 1 };
+
+            this._mockIRepository
+                .Setup(x => x.SaveChanges())
+                .Verifiable("Add was not Invoked");
+
+            /// Action
+            this._sut.AddAccount(customer, account);
+
+            /// Assert 
+            this._mockIRepository.Verify(x => x.SaveChanges(), Times.Once);
+        }
+
+        [TestMethod]
+        public void WhenAddAccountShouldInvokeRepository()
+        {
+            /// Arrange
+            var customer = new Customer { Accounts = new List<Account>() };
+            var account = new Account { Id = 1 };
+
+            this._mockIRepository
+                .Setup(x => x.SaveChanges())
+                .Verifiable("Add was not Invoked");
+
+            /// Action
+            this._sut.AddAccount(customer, account);
+
+            /// Assert 
+            this._mockIRepository.Verify(x => x.SaveChanges(), Times.Once);
+        }
+
+        #endregion AddAccount
     }
 }

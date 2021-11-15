@@ -3,9 +3,8 @@
     using Accounts.API.Dto.Customer;
     using Accounts.Domain.Entities;
 
-    public interface ICustomerMapper
+    public interface ICustomerAccountResponseMapper
     {
-        public CustomerResponse GetCustomerResponse(Customer customer);
-
+        public AccountResponse MapToAccountsResponse(Account account);
     }
 }

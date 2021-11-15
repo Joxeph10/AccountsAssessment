@@ -6,11 +6,10 @@ namespace Accounts.UnitTests.Infrastructure
     using FluentAssertions;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using Moq;
     using System.Linq;
 
     [TestClass]
-    class RepositoryTests
+    public class RepositoryTests
     {
         [TestInitialize]
         public void Init()
@@ -24,15 +23,15 @@ namespace Accounts.UnitTests.Infrastructure
         {
             /// Arrange
             var options = new DbContextOptionsBuilder<AccountsDataContext>()
-                .UseInMemoryDatabase(databaseName: "TestDataBase")
+                .UseInMemoryDatabase(databaseName: "TestDataBase1")
                 .Options;
 
             var context = new AccountsDataContext(options);
 
-            IRepository _sut = new Repository(context);
+            IRepository _sut1 = new Repository(context);
 
             /// Action
-            var result = _sut.GetCustomers();
+            var result = _sut1.GetCustomers();
 
             /// Assert 
             result.Should().BeNullOrEmpty();
@@ -43,7 +42,7 @@ namespace Accounts.UnitTests.Infrastructure
         {
             /// Arrange
             var options = new DbContextOptionsBuilder<AccountsDataContext>()
-                .UseInMemoryDatabase(databaseName: "TestDataBase")
+                .UseInMemoryDatabase(databaseName: "TestDataBase2")
                 .Options;
 
             var context = new AccountsDataContext(options);
@@ -55,10 +54,10 @@ namespace Accounts.UnitTests.Infrastructure
             context.Customers.Add(customer4);
             context.SaveChanges();
 
-            IRepository _sut = new Repository(context);
+            IRepository _sut2 = new Repository(context);
 
             /// Action
-            var result = _sut.GetCustomers();
+            var result = _sut2.GetCustomers();
 
             /// Assert 
             result.Should().NotBeEmpty();
@@ -66,5 +65,54 @@ namespace Accounts.UnitTests.Infrastructure
         }
 
         #endregion GetCustomers
+
+        #region Add
+
+        [TestMethod]
+        public void WhenAddShouldReturnNonEmptyCollection()
+        {
+            /// Arrange
+            var options = new DbContextOptionsBuilder<AccountsDataContext>()
+                .UseInMemoryDatabase(databaseName: "TestDataBase3")
+                .Options;
+
+            var context = new AccountsDataContext(options);
+            IRepository _sut3 = new Repository(context);
+
+            var customer3 = new Customer { Id = 3, Name = "Han", Surname = "Solo" };
+
+            /// Action
+            _sut3.Add(customer3);
+
+            /// Assert 
+            _sut3.GetCustomers().Should().NotBeEmpty();
+        }
+
+        #endregion Add
+
+        #region SaveChanges
+
+        [TestMethod]
+        public void WhenSaveChangesShouldReturnNonEmptyCollection()
+        {
+            /// Arrange
+            var options = new DbContextOptionsBuilder<AccountsDataContext>()
+                .UseInMemoryDatabase(databaseName: "TestDataBase4")
+                .Options;
+
+            var context = new AccountsDataContext(options);
+            IRepository _sut4 = new Repository(context);
+
+            var customer3 = new Customer { Id = 3, Name = "Han", Surname = "Solo" };
+            context.Customers.Add(customer3);
+
+            /// Action
+            _sut4.SaveChanges();
+
+            /// Assert 
+            _sut4.GetCustomers().Should().NotBeEmpty();
+        }
+
+        #endregion SaveChanges
     }
 }

@@ -20,5 +20,16 @@
                 .Include(c => c.Accounts)
                 .ThenInclude(a => a.AccountTransactions);
         }
+
+        public void Add<TEntity>(TEntity entity)
+        {
+            this._dataContext.Add(entity);
+            this._dataContext.SaveChanges();
+        }
+
+        public void SaveChanges()
+        {
+            this._dataContext.SaveChanges();
+        }
     }
 }
