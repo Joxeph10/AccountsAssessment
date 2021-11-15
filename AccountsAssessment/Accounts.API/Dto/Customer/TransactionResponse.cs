@@ -7,6 +7,5 @@
         public string Description { get; set; }
         public double Income { get; set; }
         public string TransactionType { get; set; }
-        public double Balance { get; set; }
     }
 }

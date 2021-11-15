@@ -22,7 +22,7 @@
         #region MapToAccountCreationResponse
 
         [TestMethod]
-        public void WhenMapToAccountCreationResponseGetCustomerResponseShouldReturnEmptyAccountCreationResponse()
+        public void WhenMapToAccountCreationResponseShouldReturnEmptyAccountCreationResponse()
         {
             /// Arrange
             Account account1 = null;
@@ -37,7 +37,7 @@
         }
 
         [TestMethod]
-        public void WhenMapToAccountCreationResponseGetCustomerResponseShouldReturnAccountCreationResponse()
+        public void WhenMapToAccountCreationResponseShouldReturnAccountCreationResponse()
         {
             /// Arrange
             var account1 = new Account
