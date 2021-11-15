@@ -49,7 +49,6 @@
             result.Should().BeEquivalentTo(expectedResult);
         }
 
-
         #endregion MapToTransactionsResponse
     }
 }

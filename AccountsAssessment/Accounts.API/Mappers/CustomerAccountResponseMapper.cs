@@ -3,34 +3,18 @@
     using Accounts.API.Dto.Customer;
     using Accounts.API.Interfaces;
     using Accounts.Domain.Entities;
-    using System.Collections.Generic;
     using System.Linq;
 
-    public class CustomerApplicationServiceMapper : ICustomerApplicationServiceMapper
+    public class CustomerAccountResponseMapper : ICustomerAccountResponseMapper
     {
         private readonly ICustomerTransactionResponseMapper _customerTransactionResponseMapper;
 
-        public CustomerApplicationServiceMapper(ICustomerTransactionResponseMapper customerTransactionResponseMapper)
+        public CustomerAccountResponseMapper(ICustomerTransactionResponseMapper customerTransactionResponseMapper)
         {
             this._customerTransactionResponseMapper = customerTransactionResponseMapper;
         }
 
-        public CustomerResponse GetCustomerResponse(Customer customer)
-        {
-            var response = new CustomerResponse();
-
-            if (customer != null)
-            {
-                response.Name = customer.Name;
-                response.Surname = customer.Surname;
-                response.FullName = $"{customer.Name} {customer.Surname}";
-                response.Accounts = customer.Accounts.OrderBy(o => o.CreatedDate).Select(a => GetAccountsResponse(a));
-            }
-
-            return response;
-        }
-
-        private AccountResponse GetAccountsResponse(Account account)
+        public AccountResponse MapToAccountsResponse(Account account)
         {
             var transactionsResponsesList = account.AccountTransactions
                 .Select(transaction => this._customerTransactionResponseMapper.MapToTransactionsResponse(transaction));

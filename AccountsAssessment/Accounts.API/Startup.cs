@@ -51,6 +51,7 @@ namespace Accounts.API
             services.AddTransient<IAccountApplicationServiceMapper, AccountApplicationServiceMapper>();
             services.AddTransient<ICustomerApplicationServiceMapper, CustomerApplicationServiceMapper>();
             services.AddTransient<ICustomerTransactionResponseMapper, CustomerTransactionResponseMapper>();
+            services.AddTransient<ICustomerAccountResponseMapper, CustomerAccountResponseMapper>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

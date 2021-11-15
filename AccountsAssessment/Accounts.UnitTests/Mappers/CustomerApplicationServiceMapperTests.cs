@@ -18,7 +18,7 @@
         [TestInitialize]
         public void Init()
         {
-            this._sut = new CustomerApplicationServiceMapper();
+            //this._sut = new CustomerApplicationServiceMapper();
         }
 
         #region GetCustomerResponse
