@@ -5,7 +5,7 @@
 
     public interface ICustomerApplicationServiceMapper
     {
-        public CustomerResponse GetCustomerResponse(Customer customer);
+        public CustomerResponse MapToCustomerResponse(Customer customer);
 
     }
 }

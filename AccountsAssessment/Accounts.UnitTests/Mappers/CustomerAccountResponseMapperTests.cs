@@ -28,50 +28,6 @@
         #region MapToAccountsResponse
 
         [TestMethod]
-        public void WhenMapToAccountsResponseShouldInvokeMapToTransactionsResponse()
-        {
-            /// Arrange
-            var accountTransaction = new AccountTransaction
-            {
-                Id = 1,
-                Comment = "Comment",
-                Amount = 12.3,
-                CreatedDate = DateTime.Now,
-                TransactionType = ETransactionTypes.Credit
-            };
-
-            var account = new Account
-            {
-                AccountNumber = Guid.NewGuid(),
-                Balance = 12.3,
-                AccountTransactions = new List<AccountTransaction>
-                {
-                    accountTransaction
-                }
-            };
-
-            var expectedTransactionResponse = new TransactionResponse
-            {
-                Description = accountTransaction.Comment,
-                Income = accountTransaction.Amount,
-                TransactionDate = accountTransaction.CreatedDate.ToShortDateString(),
-                TransactionType = accountTransaction.TransactionType.ToString()
-            };
-
-            this._mockCustomerTransactionResponseMapper
-                .Setup(x => x.MapToTransactionsResponse(It.Is<AccountTransaction>(y => y.Id == accountTransaction.Id)))
-                .Returns(expectedTransactionResponse)
-                .Verifiable("MapToTransactionsResponse was not invoked.");
-
-            /// Action
-            this._sut.MapToAccountsResponse(account);
-
-            /// Assert 
-            this._mockCustomerTransactionResponseMapper
-                .Verify(x => x.MapToTransactionsResponse(It.Is<AccountTransaction>(y => y.Id == accountTransaction.Id)), Times.Once);
-        }
-
-        [TestMethod]
         public void WhenMapToAccountsResponseShouldReturnAccountResponse()
         {
             /// Arrange

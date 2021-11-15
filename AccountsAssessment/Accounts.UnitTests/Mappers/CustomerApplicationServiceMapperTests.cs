@@ -7,124 +7,128 @@
     using Accounts.Domain.Enumerations;
     using FluentAssertions;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Moq;
     using System;
     using System.Collections.Generic;
+    using System.Linq;
 
     [TestClass]
     public class CustomerApplicationServiceMapperTests
     {
         private ICustomerApplicationServiceMapper _sut;
+        private Mock<ICustomerAccountResponseMapper> _MockCustomerAccountResponseMapper;
 
         [TestInitialize]
         public void Init()
         {
-            //this._sut = new CustomerApplicationServiceMapper();
+            this._MockCustomerAccountResponseMapper = new Mock<ICustomerAccountResponseMapper>();
+
+            this._sut = new CustomerApplicationServiceMapper(this._MockCustomerAccountResponseMapper.Object);
         }
 
-        #region GetCustomerResponse
+        #region MapToCustomerResponse
 
         [TestMethod]
-        public void WhenGetCustomerResponseShouldReturnCustomerResponse()
+        public void WhenMapToCustomerResponseShouldSkipMapToAccountsResponse()
         {
             /// Arrange
-            var transaction1 = new AccountTransaction
+            Customer customer1 = null;
+
+            /// Action
+            this._sut.MapToCustomerResponse(customer1);
+
+            /// Assert 
+            this._MockCustomerAccountResponseMapper.Verify(x => x.MapToAccountsResponse(It.IsAny<Account>()), Times.Never);
+        }
+
+        [TestMethod]
+        public void WhenMapToCustomerResponseShouldEmptyCustomerResponse()
+        {
+            /// Arrange
+            Customer customer1 = null;
+
+            var expectedResult = new CustomerResponse();
+
+            /// Action
+            var result = this._sut.MapToCustomerResponse(customer1);
+
+            /// Assert 
+            result.Should().BeEquivalentTo(expectedResult);
+        }
+
+        [TestMethod]
+        public void WhenMapToCustomerResponseShouldReturnCustomerResponse()
+        {
+            /// Arrange
+            var accountTransaction = new AccountTransaction
             {
+                Comment = "Comment",
                 Amount = 12.3,
-                Comment = "Account Openning",
-                CreatedByID = 1,
                 CreatedDate = DateTime.Now,
-                LastModifiedbyID = 1,
-                LastModifiedDate = DateTime.Now,
                 TransactionType = ETransactionTypes.Credit
             };
 
-            var account1 = new Account
-            {
-                AccountNumber = Guid.NewGuid(),
-                Balance = 12.3,
-                CreatedByID = 1,
-                CreatedDate = DateTime.Now,
-                LastModifiedbyID = 1,
-                LastModifiedDate = DateTime.Now,
-                AccountTransactions = new List<AccountTransaction>
-                {
-                    transaction1
-                }
-            };
-
-            var account2 = new Account
-            {
-                AccountNumber = Guid.NewGuid(),
-                Balance = 0.0,
-                CreatedByID = 1,
-                CreatedDate = DateTime.Now,
-                LastModifiedbyID = 1,
-                LastModifiedDate = DateTime.Now
-            };
-
-            var customer1 = new Customer
+            var account = new Account
             {
                 Id = 1,
-                Name = "Luke",
-                Surname = "Skywalker",
-                Accounts = new List<Account>
-                {
-                    account1,
-                    account2
-                }
+                AccountNumber = Guid.NewGuid(),
+                AccountTransactions = new List<AccountTransaction> { accountTransaction }
+            };
+
+            var customer = new Customer
+            {
+                Id = 1,
+                Name = "customer.Name",
+                Surname = "customer.Surname",
+                Accounts = new List<Account> { account }
+            };
+
+            var expectedTransactionResponse = new TransactionResponse
+            {
+                Description = accountTransaction.Comment,
+                Income = accountTransaction.Amount,
+                TransactionDate = accountTransaction.CreatedDate.ToShortDateString(),
+                TransactionType = accountTransaction.TransactionType.ToString()
+            };
+
+            var expectedAccountResponse = new AccountResponse
+            {
+                AccountNumber = account.AccountNumber.ToString(),
+                Balance = $"{account.Balance} credits",
+                Transactions = new List<TransactionResponse> { expectedTransactionResponse }
             };
 
             var expectedResult = new CustomerResponse
             {
-                Name = "Luke",
-                Surname = "Skywalker",
-                FullName = "Luke Skywalker",
-                Accounts = new List<AccountResponse>
-                {
-                    new AccountResponse
-                    {
-                        AccountNumber = account1.AccountNumber.ToString(),
-                        Balance= account1.Balance.ToString(),
-                        Transactions = new List<TransactionResponse>
-                        {
-                            new TransactionResponse
-                            {
-                                TransactionDate = transaction1.CreatedDate.ToShortDateString(),
-                                Description= transaction1.Comment,
-                                Income=transaction1.Amount,
-                                TransactionType= transaction1.TransactionType.ToString()
-                            }
-                        }
-                    },
-                    new AccountResponse
-                    {
-                        AccountNumber = account2.AccountNumber.ToString(),
-                        Balance= account2.Balance.ToString()
-                    },
-                }
+                Name = customer.Name,
+                Surname = customer.Surname,
+                FullName = $"{customer.Name} {customer.Surname}",
+                Accounts = new List<AccountResponse> { expectedAccountResponse }
             };
 
-            /// Action
-            var result = this._sut.GetCustomerResponse(customer1);
-
-            /// Assert 
-            result.Should().BeEquivalentTo(expectedResult);
-        }
-
-        [TestMethod]
-        public void WhenGetCustomerResponseShouldReturnEmptyCustomerResponse()
-        {
-            /// Arrange
-            Customer customer1 = null;
-            var expectedResult = new CustomerResponse();
+            this._MockCustomerAccountResponseMapper
+                .Setup(x => x.MapToAccountsResponse(It.IsAny<Account>()))
+                .Returns(expectedAccountResponse)
+                .Verifiable("MapToAccountsResponse was not invoked.");
 
             /// Action
-            var result = this._sut.GetCustomerResponse(customer1);
+            var result = this._sut.MapToCustomerResponse(customer);
 
             /// Assert 
-            result.Should().BeEquivalentTo(expectedResult);
+            result.Should().BeOfType(typeof(CustomerResponse));
+            result.Name.Should().Be(expectedResult.Name);
+            result.Surname.Should().Be(expectedResult.Surname);
+            result.FullName.Should().Be(expectedResult.FullName);
+
+            result.Accounts.First().AccountNumber.Should().Be(expectedAccountResponse.AccountNumber);
+            result.Accounts.First().Balance.Should().Be(expectedAccountResponse.Balance);
+
+            result.Accounts.First().Transactions.First().Description.Should().Be(expectedTransactionResponse.Description);
+            result.Accounts.First().Transactions.First().Income.Should().Be(expectedTransactionResponse.Income);
+            result.Accounts.First().Transactions.First().TransactionDate.Should().Be(expectedTransactionResponse.TransactionDate);
+            result.Accounts.First().Transactions.First().TransactionType.Should().Be(expectedTransactionResponse.TransactionType);
         }
 
-        #endregion GetCustomerResponse
+        #endregion MapToCustomerResponse
     }
 }

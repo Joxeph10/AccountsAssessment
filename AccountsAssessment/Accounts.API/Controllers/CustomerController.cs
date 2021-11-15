@@ -45,7 +45,7 @@
         public CustomerResponse Get(int customerId)
         {
             var customer = this._customerApplicationService.GetCustomerById(customerId);
-            var response = this._customerMapper.GetCustomerResponse(customer);
+            var response = this._customerMapper.MapToCustomerResponse(customer);
             return response;
         }
 
